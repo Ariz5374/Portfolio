@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Ariz Karim</title>
+  <meta name="description"
+    content="Selected projects by Ariz Karim — a game library, live-data storefront, expense tracker, password analyzer, and more. Every project is a working page." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ───────── Site header (shared) ───────── -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html">Ariz Karim</a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link active" href="work.html" aria-current="page">Work</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ───────── Page hero ───────── -->
+    <section class="page-hero container" aria-labelledby="work-title">
+      <p class="eyebrow" data-reveal>Selected work</p>
+      <h1 class="page-title" id="work-title" data-reveal>Built to do a job, not to fill a page</h1>
+      <p class="page-sub" data-reveal>Every project below is a working page — open it and use it. New work is added to
+        <code>js/projects.js</code> and appears here automatically.</p>
+    </section>
+
+    <!-- ───────── Project grid ───────── -->
+    <section class="section" id="projects">
+      <div class="container">
+        <!-- All featured projects, rendered by js/main.js from js/projects.js -->
+        <div class="work-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ───────── Footer (shared) ───────── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Ariz Karim — design &amp; code.</p>
+      <p class="footer-note">More experiments in the <a class="text-link" href="archive/index.html">archive</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

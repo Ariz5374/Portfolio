@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop exercise</title>
+      <link rel="stylesheet" href="loop.css">
+</head>
+<body>
+    <center>
+        <h1>Exercise 1  Multiplication Table</h1>
+
+   <b>
+    <input placeholder="Table of" id="Table of">
+    <input placeholder="Number of times" id="numOftimes">
+    <button id="Tablebtn">Show Table</button>
+    <div id="tableShow"></div>
+    </b>
+    <hr>
+
+<script>
+let tableOf = document.getElementById("Table of") 
+let numOfTimes = document.getElementById("numOftimes") 
+
+let tableButton = document.getElementById("Tablebtn") 
+
+let tableShow = document.getElementById("tableShow") 
+
+let renderTable = () => {
+    let tableOfValue = tableOf.value
+    let numOfTimesvalue = numOfTimes.value
+    tableShow.innerHTML = ""; 
+
+    for(x = 1; x <= numOfTimesvalue; x++){
+        let para = "<p>" + tableOfValue + "x" + x + "=" + x * tableOfValue + "</p>"
+        tableShow.innerHTML += para
+
+    }    
+}    
+
+tableButton.addEventListener("click", renderTable)
+</script>
+<h1>Exercise 2 Even Numbers</h1>
+<b>
+
+<input placeholder="Enter Number" id="numinput">
+<button id="Evennumberbtn">Show even numbers</button>
+<div id="Evendiv"></div>
+</b>
+<hr>
+
+<script>
+let userInput = document.getElementById("numinput")
+let numberBtn = document.getElementById("Evennumberbtn")
+let evenDiv = document.getElementById("Evendiv")
+
+let renderNumber = () => {
+    
+   let userInputvalue=userInput.value
+    evenDiv.innerHTML = "";
+    
+    for(x=1;x<=userInputvalue;x++){
+let para2= "<p>"+ x + "</p>"
+if(x % 2==0)
+evenDiv.innerHTML+=para2
+
+
+    } 
+
+
+
+
+}
+
+    numberBtn.addEventListener("click", renderNumber);
+
+
+
+
+
+
+</script>
+
+<h1>Exercise 3  Countdown</h1>
+<b>
+<input placeholder="Enter Number" id="countdowninput">
+<button id="countdownbtn">Start Countdown</button>
+<div id="countdowndiv"></div>
+</b>
+
+
+<script>
+let userInput2= document.getElementById("countdowninput")
+let countdownbutton= document.querySelector("#countdownbtn")
+let countdownDiv= document.getElementById("countdowndiv")
+console.log(userInput2);
+console.log(countdownbutton);
+
+let renderCountdown = () =>
+{
+    let userInput2value = Number(userInput2.value);
+    countdownDiv.innerHTML= ""
+    for(x=userInput2value;x>=1;x--){
+      let para = "<p>"+ x + "</p>"
+      countdownDiv.innerHTML+= para
+    }
+}
+
+countdownbutton.addEventListener("click",renderCountdown)
+
+
+
+
+
+
+</script>
+<hr>
+<b>  </b>
+ <h1>Exercise 4 Sum of Numbers</h1>
+
+<input placeholder="Enter Number" id="suminput">
+<button id="sumbtn">Calculate Sum</button>
+
+<div id="sumdiv"></div>
+  </b>
+<hr>
+
+<script>
+let sumInput = document.getElementById("suminput");
+let sumBtn = document.getElementById("sumbtn");
+let sumDiv = document.getElementById("sumdiv");
+
+let CalculateSum = () => {
+
+    let sumInputValue = Number(sumInput.value);
+
+    let sum = 0
+
+    for ( x = 1; x <= sumInputValue; x++) {
+        sum += x
+    }
+
+    sumDiv.innerHTML = "<p><b>Sum = " + sum + "</b></p>"
+}
+
+sumBtn.addEventListener("click", CalculateSum)
+</script>
+<h1>Exercise 5  Number Pattern</h1>
+<input placeholder="Enter Number" id="inputpattern">
+<button id="patternbtn">Show pattern</button>
+<div id="patterndiv"></div>
+<script>
+let inputPattern = document.querySelector("#inputpattern")
+let inputBtn = document.querySelector("#patternbtn")
+let inputDiv = document.querySelector("#patterndiv")
+let renderPattern = () => {
+    let number = Number(inputpattern.value)
+    inputDiv.innerHTML=""
+    for(x=1;x<=number;x++){
+        let line=""
+        for(y=1;y<=number;y++)
+    {
+        line +=j=y
+    }
+    inputDiv.innerHTML= "<p><b>"+ line + "</b></p>"
+
+    }
+}
+inputBtn.addEventListener("click",renderPattern)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+ 
+
+</Center>

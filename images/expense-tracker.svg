@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t">
+  <title id="t">Expense Tracker — bar chart mark</title>
+  <rect width="1200" height="800" fill="#F7F4EF"/>
+  <rect x="28" y="28" width="1144" height="744" fill="none" stroke="#DAD4C8" stroke-width="2"/>
+  <line x1="390" y1="250" x2="390" y2="544" stroke="#1C1B19" stroke-width="8" stroke-linecap="round"/>
+  <line x1="390" y1="544" x2="812" y2="544" stroke="#1C1B19" stroke-width="8" stroke-linecap="round"/>
+  <rect x="468" y="404" width="64" height="140" rx="10" fill="#1C1B19"/>
+  <rect x="585" y="324" width="64" height="220" rx="10" fill="#E4572E"/>
+  <rect x="702" y="244" width="64" height="300" rx="10" fill="#1C1B19"/>
+  <line x1="470" y1="634" x2="730" y2="634" stroke="#E4572E" stroke-width="10" stroke-linecap="round"/>
+</svg>

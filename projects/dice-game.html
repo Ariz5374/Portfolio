@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game — Tabletop Scoreboard</title>
+    <link rel="stylesheet" href="dice-game.css">
+</head>
+
+<body>
+
+    <h1>Dice Game</h1>
+
+    <p class="instructions">
+        Take turns rolling — Team A goes first, then Team B, back and forth.
+        <strong>Roll a 6 and your points double</strong> for that turn — first team to reach 60 wins!
+    </p>
+
+    <div class="boards">
+
+        <div class="team-card team-a active" id="card_1">
+
+            <h2>Team A</h2>
+
+            <p>Total: <span id="total_number_1">0</span></p>
+
+            <p>Dice: <span id="dice_1">-</span></p>
+
+            <p>Average: <span id="average_1">0.00</span></p>
+
+            <p>Highest Roll: <span id="highest_1">0</span></p>
+
+            <p>Lowest Roll: <span id="lowest_1">0</span></p>
+
+            <p>Turns: <span id="teamA_turns">0</span></p>
+
+            <button id="roll_dice_1">Roll Dice</button>
+
+        </div>
+
+        <div class="team-card team-b" id="card_2">
+
+            <h2>Team B</h2>
+
+            <p>Total: <span id="total_number_2">0</span></p>
+
+            <p>Dice: <span id="dice_2">-</span></p>
+
+            <p>Average: <span id="average_2">0.00</span></p>
+
+            <p>Highest Roll: <span id="highest_2">0</span></p>
+
+            <p>Lowest Roll: <span id="lowest_2">0</span></p>
+
+            <p>Turns: <span id="teamB_turns">0</span></p>
+
+            <button id="roll_dice_2">Roll Dice</button>
+
+        </div>
+
+    </div>
+
+    <h2 id="banner"></h2>
+
+    <button id="reset_btn">Play Again</button>
+
+    <script src="dice-game.js"></script>
+
+</body>
+
+</html>

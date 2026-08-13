@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="array.css">
+</head>
+<body>
+<center>
+<h1>JavaScript Arrays Assignment
+</h1>
+<h2>Question 1:
+    Create an array of 5 cities. Add 2 new cities at the end using push(). Display the updated array in the browser.
+</h2>
+<br>
+<h2>Updated cities</h2>
+
+<p id="output"></p>
+<hr>
+
+</center>
+</body>
+</html>
+
+<script>
+let cities = ["Karachi","Peshawar","Islamabad","Lahore","Faislabad"]
+cities.push("Multan","Rawalpindi")
+    document.getElementById("output").innerHTML="<b>"+"Updated cities:"+ cities.join(",")+"</b>"
+
+</script>
+<center>
+<h2>
+Question 2:
+Create an array of 6 favorite foods. Remove the last food using pop(). Print the updated array on the webpage.
+
+</h2>
+<br>
+
+<p1 id="outputBfr"></p1>
+<p2  id="output2"></p>
+
+
+
+</center>
+<hr>
+<script>
+let favFoods = ["Pizza","Burger","Biryani","Sushi","Popcorn","Donuts"]
+document.getElementById("outputBfr").innerHTML="<b>"+"Fav foods:"+ favFoods +"</b>"+ "<br>" 
+
+favFoods.pop()
+document.getElementById("output2").innerHTML= "<b>"+ "Upadated Fav Food List:"+ favFoods+"</b>"+"</hr>"
+
+</script>
+<center>
+<h2>
+    Question 3:
+Create an array of 5 colors. Remove the first color using shift(). Display all remaining colors using a for loop.
+</h2>
+<p id="output3"></p>
+<hr>
+</center>
+
+<script>
+
+     let colors = ["red","green","yellow","blue","purple",]
+     colors.shift()
+     let result = ""
+  for(let x = 0 ; x< colors.length;x++){
+    result+=colors[x]+"<br>"
+  }
+
+document.getElementById("output3").innerHTML= "<b>"+"<center>"+"Updated result: " +result+"</b>"+ "</center>" 
+
+</script><center>
+<h2>Question 4
+Create an array of 5 programming languages. Add "HTML" and "CSS" at the beginning using unshift(). Print the updated array.</h2>
+<p id="output4"></p>
+<p id="output4Bfr"></p>
+<hr>
+
+
+
+
+</center>
+<script>
+let programmingLang=["Python","SQL","Java","Javascript","C++"]
+
+document.getElementById("output4Bfr").innerHTML="<b>"+" Original List: " +programmingLang+"</b>"
+
+programmingLang.unshift("HTML","CSS")
+document.getElementById("output4").innerHTML= "<b>"+"Updated List: " + programmingLang + "</b>"
+
+
+
+
+
+
+</script><center>
+<h2>
+Question 5
+Create an array of 8 fruits. Use slice() to create a new array containing only the 3rd to 6th fruits. Display both the original array and the copied array.
+
+</h2>
+<p id="output5Bfr"></p>
+<p id="output5"></p>
+
+<hr>
+</center>
+<script>
+let fruits = [  "Apple",
+  "Banana",
+  "Orange",  "Mango",
+  "Grapes",
+  "Pineapple",
+  "Strawberry",
+  "Watermelon"]
+  document.getElementById("output5Bfr").innerHTML="<b>"+"Original array: "+fruits+ "</b>"
+ let newFruits = fruits.slice(2,7)
+  document.getElementById("output5")
+ .innerHTML="<b>"+"New array: "+newFruits+ "</b>"
+
+</script>
+<h2><center>
+    Question 6
+Create an array of 7 animals. Use splice() to insert "Lion" and "Tiger" after the second element without deleting any existing element. Display the updated array.
+</h2>
+<p id="ouput6"></p>
+<hr>
+</center>
+<script>
+let animals = [  "Dog",
+  "Cat",
+  "Elephant",
+  "Monkey",
+  "Horse",
+  "Rabbit",
+  "Deer"]
+animals.splice(2,0,"Lion","Tiger")
+document.getElementById("ouput6").innerHTML="<center>"+"<b>"+"Updated Array: "+animals+"</b>"+"</center>"
+
+
+</script>
+<center>
+    <h2>Question 7
+Create an array of 6 car brands. Use splice() to remove the 3rd and 4th brands. Print the updated array.</h2>
+<p id="output7"></p>
+<hr>
+</center>
+<script>
+let cars= ["BMW","Lamborghini","Mercedes","Nissan","Mclaren","Alfa Romeo"]
+cars.splice(2, 2)
+document.getElementById("output7").innerHTML= "<center>"+"<b>"+ "Updated Result: "+ cars +"</b>"+"</center>"
+
+
+
+
+
+</script>
+
+<center>
+<h2>Question 8
+Create an array of 6 subjects. Replace the 2nd subject with "Computer Science" using splice(). Display the updated array.</h2>
+<p id="ouput8"></p>
+<hr>
+</center>
+<script>
+let subjects = ["Maths","Chemistry","English","Physics","Urdu","Islamiyat"]
+subjects.splice(1, 1,"Computer Science")
+console.log(subjects)
+document.getElementById("ouput8").innerHTML="<center>"+"<b>"+"Updated subject List: "+ subjects + "</b>"+"</center>"
+
+
+</script>
+<center>
+<h2>Question 9
+Create an array of 10 student names.
+
+Perform the following operations:
+
+Add 2 new students at the end.
+Remove the first student.
+Add "Ahmed" at the beginning.
+Remove the last student.
+Display the final array using a for loop</h2>
+<p id="output9"></p>
+<hr>
+</center>
+<script>
+    let students = [
+  "Ali",
+  "Sara",
+  "Ahmed",
+  "Bilal",
+  "Zain",
+  "Hassan",
+  "Ayesha",
+  "Fatima",
+  "Usman",
+  "Omar"
+];
+students.push("Arham", "Sana")
+students.shift()
+students.unshift("Ahmed")
+students.pop
+console.log(students)
+let result2 = ""
+for(let x = 0;x< students.length;x++)
+{
+    result+= students[x]+"<br>"
+}
+document.getElementById("output9").innerHTML="<center>"+"<b>"+"Updated Student Array: "+students+"</b>"+"</center>"
+</script>
+
+<center>
+    <h2>Question 10
+Create an array of 8 mobile brands.
+
+Perform these operations in order:
+
+Add "OnePlus" at the end.
+Remove the first brand.
+Add "Apple" at the beginning.
+Copy the last 4 brands into a new array using slice().
+Insert "Nothing" after the third element using splice().
+Display both arrays using a for loop.</h2>
+<p id="output10"></p>
+<p id="output11"></p>
+<hr>
+<script>
+
+let mobiles = [
+  "Samsung",
+  "Oppo",
+  "Vivo",
+  "Xiaomi",
+  "Huawei",
+  "Nokia",
+  "Sony",
+  "Motorola"
+];
+
+mobiles.push("OnePlus");
+mobiles.shift();
+mobiles.unshift("Apple");
+
+let newPhones = mobiles.slice(-4);
+
+mobiles.splice(3, 0, "Nothing");
+
+let resultOrg = "<b>Original Array:</b><br>";
+
+for (let x = 0; x < mobiles.length; x++) {
+    resultOrg += mobiles[x] + "<br>";
+}
+
+let resultNew = "<b>New Array (Last 4 brands):</b><br>";
+
+for (let y = 0; y < newPhones.length; y++) {
+    resultNew += newPhones[y] + "<br>";
+}
+
+document.getElementById("output10").innerHTML = resultOrg;
+document.getElementById("output11").innerHTML = resultNew;
+
+</script>
+<center>
+<h2>
+    ⭐ Bonus Challenge
+Create an array of 10 numbers.
+
+Perform the following:
+
+Add 100 and 200 using push().
+Remove the first number using shift().
+Add 0 at the beginning using unshift().
+Copy the middle 5 numbers into a new array using slice().
+Replace the 4th number with 999 using splice().
+Display the final array and the copied array separately using for loops. 
+</h2>
+
+<p id="outputBonus1"></p>
+<p id="outputBonus2"></p>
+</center>
+<script>
+
+let numbers = [
+  10,
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  100
+];
+
+numbers.push(100, 200);
+
+numbers.shift();
+
+numbers.unshift(0);
+
+let copiedNumbers = numbers.slice(4, 9);
+
+numbers.splice(3, 1, 999);
+
+let finalResult = "<b>Final Array:</b><br>";
+
+for (let i = 0; i < numbers.length; i++) {
+    finalResult += numbers[i] + "<br>";
+}
+
+let copyResult = "<b>Copied Array:</b><br>";
+
+for (let j = 0; j < copiedNumbers.length; j++) {
+    copyResult += copiedNumbers[j] + "<br>";
+}
+
+document.getElementById("outputBonus1").innerHTML = finalResult;
+document.getElementById("outputBonus2").innerHTML = copyResult;
+
+</script>
