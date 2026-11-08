@@ -1,0 +1,260 @@
+/* Dice Game — Tabletop Scoreboard
+   Palette: felt green #1B4332, card cream #F7F3E8, ink #22301F,
+            Team A brass #C99A3B, Team B slate-blue #3B5C7C, win gold #E4B94E
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 48px 20px 80px;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.04), transparent 40%),
+        #1B4332;
+    background-color: #1B4332;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #F7F3E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    letter-spacing: -0.02em;
+    margin: 0 0 4px;
+    text-align: center;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin: 14px auto 0;
+    background: #E4B94E;
+    border-radius: 2px;
+}
+
+/* How-to-play instructions */
+.instructions {
+    max-width: 480px;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #CFE3D6;
+    margin: 18px 0 36px;
+}
+
+.instructions strong {
+    color: #E4B94E;
+}
+
+/* Layout: two scoreboard cards side by side */
+.boards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 760px;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0 0 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+/* Team cards */
+.team-card {
+    background: #F7F3E8;
+    color: #22301F;
+    border-radius: 18px;
+    padding: 28px 26px 24px;
+    width: 300px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-card.team-a {
+    border-top: 6px solid #C99A3B;
+}
+
+.team-card.team-b {
+    border-top: 6px solid #3B5C7C;
+}
+
+.team-card.active {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.team-card h2 {
+    color: #22301F;
+}
+
+/* Stat rows */
+p {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 0 8px;
+    font-size: 0.92rem;
+    color: #5B5647;
+    border-bottom: 1px dashed #E1DACB;
+    padding-bottom: 6px;
+}
+
+p:last-of-type {
+    border-bottom: none;
+}
+
+p span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #22301F;
+}
+
+/* Big total number */
+p:has(#total_number_1) span,
+p:has(#total_number_2) span {
+    font-family: 'Fraunces', serif;
+    font-size: 1.9rem;
+    font-weight: 800;
+}
+
+.team-a #total_number_1,
+.team-b #total_number_2 {
+    color: #C99A3B;
+}
+
+.team-b #total_number_2 {
+    color: #3B5C7C;
+}
+
+/* Dice face value shown like a die pip badge */
+p:has(#dice_1) span,
+p:has(#dice_2) span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 6px;
+    background: #22301F;
+    color: #F7F3E8;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+/* Roll buttons */
+button {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    width: 100%;
+    margin-top: 14px;
+    transition: transform 0.15s ease, filter 0.15s ease, opacity 0.15s ease;
+}
+
+.team-a button {
+    background: #C99A3B;
+    color: #22301F;
+}
+
+.team-b button {
+    background: #3B5C7C;
+    color: #F7F3E8;
+}
+
+button:hover:not(:disabled) {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+button:focus-visible {
+    outline: 3px solid #E4B94E;
+    outline-offset: 2px;
+}
+
+/* Divider between cards / sections, hidden visually but kept for structure */
+hr {
+    border: none;
+    width: 100%;
+    max-width: 760px;
+    height: 0;
+    margin: 28px 0 0;
+}
+
+/* Winner banner */
+#banner {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    text-align: center;
+    min-height: 1.6em;
+    margin: 34px 0 6px;
+    color: #E4B94E;
+    text-shadow: 0 2px 12px rgba(228, 185, 78, 0.35);
+}
+
+/* Play again */
+#reset_btn {
+    display: block;
+    width: auto;
+    margin: 8px auto 0;
+    padding: 12px 32px;
+    background: #E4B94E;
+    color: #22301F;
+    border-radius: 30px;
+}
+
+#reset_btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px) scale(1.02);
+}
+
+@media (max-width: 620px) {
+    .boards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 340px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
