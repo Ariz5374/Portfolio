@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t">
-  <title id="t">Storefront — shopping bag mark</title>
-  <rect width="1200" height="800" fill="#F7F4EF"/>
-  <rect x="28" y="28" width="1144" height="744" fill="none" stroke="#DAD4C8" stroke-width="2"/>
-  <path d="M 485 300 h 230 l -24 232 q -5 44 -50 44 h -82 q -45 0 -50 -44 Z" fill="none" stroke="#1C1B19" stroke-width="11" stroke-linejoin="round"/>
-  <path d="M 540 300 v -28 a 60 60 0 0 1 120 0 v 28" fill="none" stroke="#1C1B19" stroke-width="11" stroke-linecap="round"/>
-  <line x1="448" y1="620" x2="752" y2="620" stroke="#E4572E" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="640" cy="430" r="12" fill="#E4572E"/>
-</svg>
