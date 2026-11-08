@@ -1,1 +1,0 @@
-# SMIT-Remaining-time-calculator
