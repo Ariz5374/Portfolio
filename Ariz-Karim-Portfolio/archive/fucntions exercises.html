@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="functions.css">
+</head>
+<body>
+    
+</body>
+</html>
+<center>
+<h1>EXERCISE 1 — STUDENT MARKS COUNTER </h1>
+<h2>Marks</h2>
+<h1 id="marks">50</h1>
+<button id="addMarks">Add Bonus Marks</button>
+<button id="deductMarks">Deduct Marks</button>
+
+</center>
+<script>
+let MarksH1 = document.querySelector("#marks")
+let plusMarks= document.querySelector("#addMarks")
+let minusMarks = document.querySelector("#deductMarks")
+console.log(MarksH1)
+console.log(plusMarks)
+console.log(minusMarks)
+let Marks = Number(MarksH1.innerHTML)
+let bonusMarks = () => {
+    Marks+=5
+    MarksH1.innerHTML=Marks
+}
+let deductMarks = () => {
+   Marks-=5
+   MarksH1.innerHTML=Marks
+
+
+}
+plusMarks.addEventListener("click",bonusMarks)
+minusMarks.addEventListener("click",deductMarks)
+</script>
+<br>
+<hr>
+<center>
+<h1>EXERCISE 2 — AGE COUNTER</h1>
+<h2>Age</h2>
+<h1 id="Age">18</h1>
+<button id="ageUp">Birthday</button>
+<button id="ageDown">Go Back One Year</button>
+
+</center>
+<script>
+
+let ageH1 = document.querySelector("#Age")
+let plusAge = document.querySelector("#ageUp")
+let minusAge = document.querySelector("#ageDown")
+console.log(ageH1)
+console.log(plusAge)
+console.log(minusAge)
+let age = ageH1.innerHTML
+let ageUp = () => {
+    age++
+    ageH1.innerHTML=age
+}
+let ageDown = () => {
+    age--
+    ageH1.innerHTML=age
+}
+plusAge.addEventListener("click",ageUp)
+minusAge.addEventListener("click",ageDown)
+
+</script>
+<br>
+<hr>
+<center>
+<h1>EXERCISE 3 — LIGHT BULB STATUS </h1>
+<h2 id="status">BULB is off</h2>
+<button id="On">On</button>
+<button id="Off">Off</button>
+</center>
+<script>
+let bulbH2 = document.querySelector("#status")
+let onBtn = document.querySelector("#On")
+let offBtn = document.querySelector("#Off")
+
+
+
+let bulbOn = () => {
+    bulbH2.innerHTML = "💡 BULB is ON";
+    bulbH2.style.color = "#22c55e";
+    bulbH2.style.textShadow = "0 0 20px #22c55e";
+}
+
+let bulbOff = () => {
+    bulbH2.innerHTML = "⚫ BULB is OFF";
+    bulbH2.style.color = "#ef4444";
+    bulbH2.style.textShadow = "0 0 20px #ef4444";
+}
+onBtn.addEventListener("click",bulbOn)
+offBtn.addEventListener("click",bulbOff)
+
+
+
+
+</script>

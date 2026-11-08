@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#050816,#0f172a,#1e293b);
+    overflow:hidden;
+    position:relative;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Animated Background */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#00d4ff;
+    border-radius:50%;
+    filter:blur(220px);
+    opacity:.15;
+    top:-180px;
+    left:-180px;
+    animation:move1 12s infinite alternate;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#8b5cf6;
+    border-radius:50%;
+    filter:blur(220px);
+    opacity:.18;
+    bottom:-180px;
+    right:-180px;
+    animation:move2 12s infinite alternate;
+}
+
+@keyframes move1{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(120px,80px);
+    }
+}
+
+@keyframes move2{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(-120px,-80px);
+    }
+}
+
+/* Main Card */
+
+h2{
+    width:900px;
+    max-width:90%;
+    padding:45px;
+    text-align:center;
+    color:white;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:25px;
+    box-shadow:0 25px 50px rgba(0,0,0,.45);
+    position:relative;
+    z-index:10;
+    animation:fadeIn 1s ease;
+    line-height:1.8;
+}
+
+/* Terminal Header */
+
+h2::before{
+    content:"🟢 🟡 🔴   Developer Console";
+    display:block;
+    text-align:left;
+    font-family:'JetBrains Mono',monospace;
+    font-size:15px;
+    color:#cbd5e1;
+    margin-bottom:25px;
+    padding-bottom:15px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+/* Console Text */
+
+h2::after{
+    content:"console.log('Open Inspect → Console to view the output');";
+    display:block;
+    margin-top:25px;
+    font-family:'JetBrains Mono',monospace;
+    color:#22c55e;
+    font-size:18px;
+}
+
+/* Fade Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    h2{
+        padding:30px;
+        font-size:20px;
+    }
+
+    h2::before{
+        font-size:12px;
+    }
+
+    h2::after{
+        font-size:15px;
+    }
+
+}
