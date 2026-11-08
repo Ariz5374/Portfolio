@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <title>Archive — Early Experiments · Ariz Karim</title>
+  <style>
+    :root {
+      --paper: #F7F4EF;
+      --ink: #1C1B19;
+      --muted: #6E695F;
+      --line: #E3DDD0;
+      --accent: #C13D18;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: system-ui, -apple-system, sans-serif;
+      --mono: ui-monospace, monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      padding: 4rem clamp(1.25rem, 4vw, 2.5rem);
+    }
+    main { max-width: 680px; margin: 0 auto; }
+    a { color: inherit; text-decoration: none; }
+    h1 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+    }
+    .note {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    p.lede { color: var(--muted); max-width: 52ch; margin-bottom: 2.5rem; }
+    ul { border-top: 1px solid var(--line); }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    li span { color: var(--muted); font-family: var(--mono); font-size: 0.78rem; }
+    li a { font-weight: 500; transition: color 0.2s; }
+    li a:hover { color: var(--accent); }
+    .back {
+      display: inline-block;
+      margin-top: 2.5rem;
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .back:hover { color: var(--accent); border-color: var(--accent); }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p class="note">Archive</p>
+    <h1>Early experiments</h1>
+    <p class="lede">Small builds from when I was getting comfortable with the basics — kept here for the record, not
+      because they represent my current work. The main site shows what I build today.</p>
+
+    <ul>
+      <li><a href="Date assignment countdown timer.html">Countdown Timer</a><span>Date object</span></li>
+      <li><a href="student bio.html">Student Bio Formatter</a><span>String methods</span></li>
+      <li><a href="index array.html">Array Methods Practice</a><span>Array methods</span></li>
+      <li><a href="remaining time calculator.html">Remaining Time Calculator</a><span>Date math</span></li>
+      <li><a href="array shopping List.html">Shopping List Manager</a><span>Arrays</span></li>
+      <li><a href="loop exercise.html">Loop Exercise Utility</a><span>Loops</span></li>
+      <li><a href="fucntions exercises.html">Functions Exercise</a><span>Functions</span></li>
+      <li><a href="js true or false assignment.html">True / False Analyzer</a><span>Coercion</span></li>
+      <li><a href="artithmetic operators in js.html">Arithmetic Operators Tool</a><span>Operators</span></li>
+      <li><a href="if else in js.html">If/Else Decision Engine</a><span>Control flow</span></li>
+      <li><a href="bmi calculator.html">BMI Calculator</a><span>Math</span></li>
+      <li><a href="grade checker.html">Grade Checker</a><span>Conditionals</span></li>
+    </ul>
+
+    <a class="back" href="../index.html">&larr; Back to the main site</a>
+  </main>
+</body>
+
+</html>

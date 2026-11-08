@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+    color:#fff;
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+/* Headings */
+
+h1:first-of-type{
+    font-size:42px;
+    color:#38bdf8;
+    margin-bottom:15px;
+    text-shadow:0 0 15px rgba(56,189,248,.7);
+}
+
+h1{
+    margin:15px 0;
+}
+
+h2{
+    color:#cbd5e1;
+    margin-bottom:10px;
+}
+
+/* Counter Numbers */
+
+#marks,
+#Age{
+    font-size:70px;
+    color:#22c55e;
+    text-shadow:0 0 20px rgba(34,197,94,.8);
+    margin:20px 0;
+}
+
+/* Bulb Status */
+
+#status{
+    font-size:35px;
+    color:#facc15;
+    text-shadow:0 0 15px rgba(250,204,21,.8);
+}
+
+/* Buttons */
+
+button{
+    margin:12px;
+    padding:15px 30px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#3b82f6,#06b6d4);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 30px rgba(6,182,212,.5);
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+/* Exercise Cards */
+
+center{
+    width:90%;
+    max-width:850px;
+    margin:40px auto;
+    padding:35px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+    animation:fadeIn .8s ease;
+}
+
+/* Divider */
+
+hr{
+    width:80%;
+    margin:50px auto;
+    border:none;
+    height:2px;
+    background:linear-gradient(to right,transparent,#38bdf8,transparent);
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Background Glow */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#06b6d4;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:.12;
+    top:-120px;
+    left:-120px;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#8b5cf6;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:.12;
+    bottom:-120px;
+    right:-120px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    h1:first-of-type{
+        font-size:30px;
+    }
+
+    #marks,
+    #Age{
+        font-size:55px;
+    }
+
+    #status{
+        font-size:28px;
+    }
+
+    button{
+        width:90%;
+        margin:10px auto;
+        display:block;
+    }
+
+    center{
+        width:95%;
+        padding:25px;
+    }
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:20px;
+}

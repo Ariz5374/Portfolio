@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+center{
+    width:100%;
+}
+
+h1{
+    color:white;
+    font-size:42px;
+    margin-bottom:30px;
+    text-shadow:0 0 20px rgba(255,255,255,.4);
+}
+
+/* Input */
+
+#User_input{
+    width:320px;
+    padding:16px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    font-size:17px;
+    background:rgba(255,255,255,.15);
+    color:white;
+    backdrop-filter:blur(10px);
+    border:2px solid rgba(255,255,255,.25);
+    transition:.3s;
+}
+
+#User_input::placeholder{
+    color:#ddd;
+}
+
+#User_input:focus{
+    border-color:#00e676;
+    box-shadow:0 0 20px rgba(0,230,118,.5);
+}
+
+/* Button */
+
+#item_btn{
+    padding:16px 28px;
+    margin-left:10px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#00c853,#69f0ae);
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#item_btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,200,83,.45);
+}
+
+#item_btn:active{
+    transform:scale(.96);
+}
+
+/* Shopping List Box */
+
+#item_div{
+    width:450px;
+    max-width:90%;
+    margin:35px auto;
+    padding:25px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+/* Items */
+
+#item_div p{
+    background:white;
+    color:#222;
+    margin:12px 0;
+    padding:15px 18px;
+    border-radius:10px;
+    text-align:left;
+    font-size:18px;
+    transition:.3s;
+    border-left:6px solid #00c853;
+}
+
+#item_div p:hover{
+    transform:translateX(8px);
+    background:#f4fff8;
+}
+
+/* Divider */
+
+hr{
+    width:80%;
+    margin:40px auto;
+    border:none;
+    height:2px;
+    background:linear-gradient(to right,transparent,#00e676,transparent);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00c853;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#203a43;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:30px;
+    }
+
+    #User_input{
+        width:90%;
+        margin-bottom:15px;
+    }
+
+    #item_btn{
+        margin-left:0;
+        width:90%;
+    }
+
+    #item_div{
+        width:95%;
+    }
+
+}

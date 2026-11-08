@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  initial-scale=1.0">
+    <title>Shopping List</title>
+     <link rel="stylesheet" href="array2.css">
+</head>
+<center>
+    
+<body>
+    <h1>Exercise 1 — Shopping List</h1>
+    <input placeholder="Enter Item" id="User_input"> <button id="item_btn">Add item</button>
+    <div id="item_div"></div>
+    <hr>
+
+</body>
+<script>
+let userInput = document.querySelector("#User_input")
+let itemBtn = document.querySelector("#item_btn")
+let itemDiv = document.querySelector("#item_div")
+let items = ["Milk","Bread","Eggs","Rice","Sugar"]
+let addItems = ()=>{
+    itemDiv.innerHTML=""
+    let userInputvalue=userInput.value
+    items.push(userInputvalue)
+   
+    
+
+    for(let x = 0;x<items.length;x++){
+        itemDiv.innerHTML+="<p><b>"+items[x]+"</b></p>"
+    }
+    userInput.value=""
+    
+}
+itemBtn.addEventListener("click",addItems)
+
+
+</script>
+</center>
+</html>
